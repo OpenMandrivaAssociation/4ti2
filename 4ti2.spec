@@ -1,6 +1,6 @@
 Name:           4ti2
 Version:        1.3.2
-Release:        1
+Release:        2
 Summary:        A software package for problems on linear spaces
 
 Group:          Sciences/Mathematics
@@ -29,8 +29,7 @@ CXXFLAGS="%{optflags} -I%{_includedir}/glpk" \
 CFLAGS="%{optflags} -I%{_includedir}/glpk" \
 %configure2_5x --disable-shared --disable-static
 perl -pi -e 's|hardcode_libdir_flag_spec=.*|hardcode_libdir_flag_spec=\"-L\\\$libdir\"|g;' libtool
-
-make %{?_smp_mflags}
+%make 
 
 %install
 make install-exec DESTDIR=%{buildroot}
@@ -44,3 +43,11 @@ make check
 %files
 %doc COPYING TODO 4ti2_manual.pdf
 %{_bindir}/*
+
+
+%changelog
+* Wed Aug 15 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.3.2-1
++ Revision: 814879
+- Import 4ti2 package (based on fedora package)
+- Import 4ti2 package (based on fedora package)
+
