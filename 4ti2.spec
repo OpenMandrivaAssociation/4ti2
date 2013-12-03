@@ -1,6 +1,6 @@
 Name:           4ti2
 Version:        1.3.2
-Release:        2
+Release:        3
 Summary:        A software package for problems on linear spaces
 
 Group:          Sciences/Mathematics
