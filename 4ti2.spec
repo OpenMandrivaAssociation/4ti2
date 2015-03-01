@@ -11,6 +11,7 @@ Source1:        http://www.4ti2.de/4ti2_manual.pdf
 Patch0:         4ti2-1.3.2-gcc47.patch
 BuildRequires:  gmp-devel
 BuildRequires:  glpk-devel
+BuildRequires:	gcc-c++, gcc, gcc-cpp
 
 %description
 A software package for algebraic, geometric and combinatorial
@@ -25,11 +26,14 @@ cp -p %{SOURCE1} .
 %patch0 -p1 -b .gcc47
 
 %build
+export CC=gcc
+export CXX=g++
+
 export LDFLAGS="%{ldflags} -lglpk"
 
 CXXFLAGS="%{optflags} -I%{_includedir}/glpk" \
 CFLAGS="%{optflags} -I%{_includedir}/glpk" \
-%configure2_5x --disable-shared --disable-static
+%configure --disable-shared --disable-static
 perl -pi -e 's|hardcode_libdir_flag_spec=.*|hardcode_libdir_flag_spec=\"-L\\\$libdir\"|g;' libtool
 %make 
 
