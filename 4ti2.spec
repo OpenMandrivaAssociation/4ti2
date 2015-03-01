@@ -25,6 +25,8 @@ cp -p %{SOURCE1} .
 %patch0 -p1 -b .gcc47
 
 %build
+export LDFLAGS="%{ldflags} -lglpk"
+
 CXXFLAGS="%{optflags} -I%{_includedir}/glpk" \
 CFLAGS="%{optflags} -I%{_includedir}/glpk" \
 %configure2_5x --disable-shared --disable-static
