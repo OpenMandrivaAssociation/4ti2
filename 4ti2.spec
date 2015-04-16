@@ -10,7 +10,7 @@
 
 Name:           4ti2
 Version:        1.6.2
-Release:        1
+Release:        2
 Summary:        A software package for problems on linear spaces
 
 Group:          Sciences/Mathematics
@@ -76,7 +76,7 @@ integers (\mathbb{Z}).
 Summary:	Development files for %{name}
 Group:		Development/C
 Requires:       %{libname} = %{EVRD}
-Requires:       %{libzsolve}} = %{EVRD}
+Requires:       %{libzsolve} = %{EVRD}
 
 %description -n %{devname}
 This subpackage contains the include files and library links for
