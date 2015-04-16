@@ -3,6 +3,10 @@
 %define libzsolve	%mklibname zsolve %{major}
 %define devname		%mklibname %{name} -d
 %define _libexecdir	/usr/libexec
+%define debug_package	%{nil}
+# docs
+%define _files_listed_twice_terminate_build 0
+#
 
 Name:           4ti2
 Version:        1.6.2
@@ -48,7 +52,7 @@ flavors:
 
 %files -n %{libname}
 %doc COPYING AUTHORS TODO NEWS README
-%{_libdir}/lib4ti2gmp.so.0*
+#%%{_libdir}/lib4ti2gmp.so.0*
 %{_libdir}/lib4ti2int32.so.0*
 %{_libdir}/lib4ti2int64.so.0*
 %{_libdir}/lib4ti2common.so.0*
@@ -64,6 +68,7 @@ This package contains the 4ti2 library for solving systems linear systems over
 integers (\mathbb{Z}).
 
 %files -n %{libzsolve}
+%doc COPYING AUTHORS TODO NEWS README
 %{_libdir}/libzsolve.so.0*
 #--------------------------------------------------------
 %package -n %{devname}
