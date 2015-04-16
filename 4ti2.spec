@@ -1,5 +1,5 @@
 %define major		0
-%define libname		%mklibname %{name} %{major}
+%define libname		%mklibname %{name}- %{major}
 %define libzsolve	%mklibname zsolve %{major}
 %define devname		%mklibname %{name} -d
 %define _libexecdir	/usr/libexec
