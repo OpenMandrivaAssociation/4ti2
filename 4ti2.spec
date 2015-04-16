@@ -1,5 +1,5 @@
 %define major		0
-%define libname		%mklibname %{name} -%{major}
+%define libname		%mklibname %{name} %{major}
 %define libzsolve	%mklibname zsolve %{major}
 %define devname		%mklibname %{name} -d
 %define _libexecdir	/usr/libexec
@@ -86,7 +86,7 @@ developing against 4ti2's libraries.
 %prep
 %setup -q
 cp -p %{SOURCE1} .
-%patch0 -p1 -b .gcc47
+#patch0 -p1 -b .gcc47
 %patch1 -p1
 %patch2 -p1
 
