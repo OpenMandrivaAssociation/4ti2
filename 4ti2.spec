@@ -15,7 +15,7 @@ Summary:        A software package for problems on linear spaces
 
 Group:          Sciences/Mathematics
 License:        GPLv2+
-URL:            http://www.4ti2.de/
+URL:            https://www.4ti2.de/
 Source0:        http://www.4ti2.de/version_%{version}/%{name}-%{version}.tar.gz
 Source1:        http://www.4ti2.de/4ti2_manual.pdf
 Patch0:         4ti2-1.3.2-gcc47.patch
